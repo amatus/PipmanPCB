@@ -694,12 +694,18 @@ UsedLibrary="/home/home/hk47/eagle/lbr/SFLipoPack.lbr"
 UsedLibrary="/home/home/hk47/eagle/lbr/ldo1117-33.lbr"
 
 [Win_1]
+Type="Control Panel"
+Loc="937 321 1536 720"
+State=2
+Number=0
+
+[Win_2]
 Type="Schematic Editor"
 Loc="0 0 599 399"
 State=1
 Number=2
 File="untitled.sch"
-View="-136.632 -44.4551 201.317 123.11"
+View="-114.142 -19.8444 -0.963794 36.2728"
 WireWidths=" 0 0.3048 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0.4064 0.1524"
 PadDiameters=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0"
 PadDrills=" 0.5 0.6 0.7 0.9 1 1.1 1.2 1.3 1.4 1.5 1.6 2 2.2 2.8 3.2 0.8"
@@ -738,14 +744,8 @@ ArcDirection=0
 AddLevel=2
 PadsSameType=0
 Layer=91
-Views=" 1: -136.632 -44.4551 201.317 123.11"
+Views=" 1: -114.142 -19.8444 -0.963794 36.2728"
 Sheet="1"
-
-[Win_2]
-Type="Control Panel"
-Loc="937 321 1536 720"
-State=2
-Number=0
 
 [Win_3]
 Type="Board Editor"
@@ -753,7 +753,7 @@ Loc="0 0 599 399"
 State=1
 Number=1
 File="untitled.brd"
-View="-24.5432 -15.2118 89.9323 93.6926"
+View="34.5006 5.319 113.997 80.9471"
 WireWidths=" 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0.4064 0 0.3048 0.254"
 PadDiameters=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0"
 PadDrills=" 0.5 0.6 0.7 0.9 1 1.1 1.2 1.3 1.4 1.5 1.6 2 2.2 2.8 3.2 0.8"
