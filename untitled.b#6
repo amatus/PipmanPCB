@@ -1968,9 +1968,8 @@ design rules under a new name.</description>
 <wire x1="62.865" y1="57.785" x2="66.675" y2="57.785" width="0.254" layer="1"/>
 <wire x1="66.675" y1="57.785" x2="66.675" y2="61.595" width="0.254" layer="1"/>
 <wire x1="66.675" y1="61.595" x2="49.53" y2="61.595" width="0.254" layer="1"/>
-<wire x1="49.53" y1="61.595" x2="49.53" y2="45.72" width="0.254" layer="1"/>
-<wire x1="49.53" y1="45.72" x2="50.5" y2="45.72" width="0.254" layer="1"/>
-<wire x1="50.5" y1="45.72" x2="50.5" y2="45.4313" width="0.254" layer="1"/>
+<wire x1="49.53" y1="61.595" x2="49.53" y2="45.4313" width="0.254" layer="1"/>
+<wire x1="50.5" y1="45.4313" x2="49.53" y2="45.4313" width="0.254" layer="1"/>
 </signal>
 <signal name="N$11">
 <contactref element="OLED_SCREEN" pad="TX"/>
