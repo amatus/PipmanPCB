@@ -4295,7 +4295,7 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <instances>
 <instance part="U$1" gate="G$1" x="25.4" y="63.5"/>
 <instance part="RTC" gate="G$1" x="68.58" y="15.24" rot="R180"/>
-<instance part="SUPPLY2" gate="GND" x="-45.72" y="99.06" rot="R270"/>
+<instance part="SUPPLY2" gate="GND" x="-43.18" y="101.6" rot="R180"/>
 <instance part="THERMO" gate="G$1" x="2.54" y="-30.48" rot="R90"/>
 <instance part="P+1" gate="VCC" x="-35.56" y="88.9"/>
 <instance part="GPS" gate="G$1" x="175.26" y="73.66"/>
@@ -4345,9 +4345,7 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <wire x1="-43.18" y1="30.48" x2="-43.18" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="-43.18" y1="-5.08" x2="-43.18" y2="-15.24" width="0.1524" layer="91"/>
 <wire x1="-43.18" y1="-15.24" x2="-40.64" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="-40.64" y1="-15.24" x2="-12.7" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="-12.7" y1="-15.24" x2="-12.7" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="-12.7" y1="-15.24" x2="-7.62" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="-15.24" x2="-7.62" y2="-15.24" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="-15.24" x2="-7.62" y2="-17.78" width="0.1524" layer="91"/>
 <pinref part="RTC" gate="G$1" pin="GND"/>
 <wire x1="68.58" y1="30.48" x2="-43.18" y2="30.48" width="0.1524" layer="91"/>
@@ -4397,6 +4395,20 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <wire x1="-40.64" y1="-7.62" x2="-40.64" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="GND@25"/>
 <wire x1="-40.64" y1="-7.62" x2="-40.64" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="-40.64" y="-7.62"/>
+<junction x="-40.64" y="-15.24"/>
+<junction x="-43.18" y="30.48"/>
+<junction x="160.02" y="45.72"/>
+<junction x="180.34" y="17.78"/>
+<junction x="-78.74" y="93.98"/>
+<junction x="-86.36" y="93.98"/>
+<junction x="53.34" y="99.06"/>
+<junction x="165.1" y="12.7"/>
+<junction x="-43.18" y="99.06"/>
+<junction x="-43.18" y="-5.08"/>
+<junction x="127" y="66.04"/>
+<junction x="-43.18" y="63.5"/>
+<junction x="127" y="45.72"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -4433,11 +4445,13 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <wire x1="-2.54" y1="83.82" x2="-2.54" y2="5.08" width="0.1524" layer="91"/>
 <label x="-2.54" y="40.64" size="1.778" layer="95"/>
 <pinref part="THERMO" gate="G$1" pin="SCL"/>
-<wire x1="-2.54" y1="5.08" x2="-2.54" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="5.08" x2="-2.54" y2="0" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="0" x2="-2.54" y2="-17.78" width="0.1524" layer="91"/>
 <pinref part="I2C2" gate="G$1" pin="2"/>
 <pinref part="U$2" gate="G$1" pin="SCL"/>
 <wire x1="-10.16" y1="5.08" x2="-2.54" y2="5.08" width="0.1524" layer="91"/>
+<junction x="-2.54" y="83.82"/>
+<junction x="-2.54" y="5.08"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -4454,6 +4468,8 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <pinref part="I2C" gate="G$1" pin="2"/>
 <pinref part="U$2" gate="G$1" pin="SDA"/>
 <wire x1="-10.16" y1="2.54" x2="2.54" y2="2.54" width="0.1524" layer="91"/>
+<junction x="2.54" y="2.54"/>
+<junction x="2.54" y="81.28"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -4472,13 +4488,13 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <wire x1="20.32" y1="10.16" x2="20.32" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="-5.08" x2="7.62" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="7.62" y1="-17.78" x2="7.62" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="10.16" x2="20.32" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="10.16" x2="20.32" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="THERMO" gate="G$1" pin="VCC"/>
 <pinref part="P+1" gate="VCC" pin="VCC"/>
 <wire x1="-25.4" y1="86.36" x2="-25.4" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="-25.4" y1="91.44" x2="50.8" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="91.44" x2="50.8" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="-58.42" y1="50.8" x2="-58.42" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="-58.42" y1="53.34" x2="-58.42" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="-58.42" y1="55.88" x2="-33.02" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="GPS" gate="G$1" pin="VCC"/>
 <wire x1="160.02" y1="83.82" x2="50.8" y2="83.82" width="0.1524" layer="91"/>
@@ -4512,10 +4528,27 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <wire x1="-93.98" y1="-12.7" x2="-68.58" y2="-12.7" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="VDD@11"/>
 <pinref part="U$2" gate="G$1" pin="VDD@3"/>
-<wire x1="-40.64" y1="0" x2="-40.64" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="0" x2="-40.64" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="2.54" x2="-40.64" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="-40.64" y1="5.08" x2="-40.64" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="-40.64" y1="10.16" x2="-17.78" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="-17.78" y1="10.16" x2="-17.78" y2="15.24" width="0.1524" layer="91"/>
+<junction x="-17.78" y="15.24"/>
+<junction x="-109.22" y="10.16"/>
+<junction x="132.08" y="50.8"/>
+<junction x="50.8" y="91.44"/>
+<junction x="-33.02" y="76.2"/>
+<junction x="-33.02" y="55.88"/>
+<junction x="-40.64" y="5.08"/>
+<junction x="-58.42" y="55.88"/>
+<junction x="20.32" y="10.16"/>
+<junction x="-109.22" y="27.94"/>
+<junction x="-33.02" y="86.36"/>
+<junction x="-25.4" y="86.36"/>
+<junction x="-109.22" y="22.86"/>
+<junction x="-93.98" y="-12.7"/>
+<pinref part="U$2" gate="G$1" pin="VDD@21"/>
+<junction x="-40.64" y="2.54"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -4580,6 +4613,7 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <wire x1="-76.2" y1="99.06" x2="-76.2" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="3.3LDO" gate="G$1" pin="VIN"/>
 <wire x1="-76.2" y1="53.34" x2="-63.5" y2="53.34" width="0.1524" layer="91"/>
+<junction x="-76.2" y="99.06"/>
 </segment>
 </net>
 <net name="N$18" class="0">
@@ -4678,13 +4712,12 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <pinref part="I2C5" gate="G$1" pin="2"/>
 <wire x1="-58.42" y1="-12.7" x2="-48.26" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="-12.7" x2="-48.26" y2="5.08" width="0.1524" layer="91"/>
+<junction x="-48.26" y="5.08"/>
 </segment>
 </net>
 <net name="N$22" class="0">
 <segment>
-<wire x1="-12.7" y1="-2.54" x2="-10.16" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="CS"/>
-<wire x1="-10.16" y1="-5.08" x2="-12.7" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="CSC"/>
 <wire x1="-10.16" y1="-2.54" x2="-10.16" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
