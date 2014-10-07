@@ -4221,8 +4221,8 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <part name="I2C5" library="adafruit" deviceset="R-US_" device="R1005"/>
 <part name="I2C4" library="adafruit" deviceset="R-US_" device="R1005"/>
 <part name="I2C3" library="adafruit" deviceset="R-US_" device="R1005"/>
-<part name="I2C1" library="adafruit" deviceset="R-US_" device="R1005"/>
 <part name="I2C6" library="adafruit" deviceset="R-US_" device="R1005"/>
+<part name="I2C1" library="adafruit" deviceset="R-US_" device="R1005"/>
 </parts>
 <sheets>
 <sheet>
@@ -4250,11 +4250,11 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <instance part="10EEPROM" gate="G$1" x="137.16" y="25.4"/>
 <instance part="I2C2" gate="G$1" x="-17.78" y="83.82"/>
 <instance part="I2C" gate="G$1" x="-10.16" y="76.2"/>
-<instance part="I2C5" gate="G$1" x="-60.96" y="-12.7" rot="R180"/>
+<instance part="I2C5" gate="G$1" x="-63.5" y="-12.7"/>
 <instance part="I2C4" gate="G$1" x="-60.96" y="25.4" rot="R180"/>
 <instance part="I2C3" gate="G$1" x="-93.98" y="10.16" rot="R180"/>
-<instance part="I2C1" gate="G$1" x="-88.9" y="25.4" rot="R180"/>
 <instance part="I2C6" gate="G$1" x="-88.9" y="-17.78" rot="R180"/>
+<instance part="I2C1" gate="G$1" x="-88.9" y="27.94" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -4416,23 +4416,12 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <pinref part="GPS" gate="G$1" pin="VCC"/>
 <wire x1="160.02" y1="83.82" x2="50.8" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="-58.42" y1="55.88" x2="-109.22" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="-109.22" y1="55.88" x2="-109.22" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="-109.22" y1="25.4" x2="-109.22" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="-109.22" y1="55.88" x2="-109.22" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="-109.22" y1="27.94" x2="-109.22" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-109.22" y1="22.86" x2="-109.22" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="-109.22" y1="10.16" x2="-109.22" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="-99.06" y1="10.16" x2="-109.22" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="-20.32" y1="25.4" x2="-20.32" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="-20.32" y1="25.4" x2="-55.88" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="-55.88" y1="25.4" x2="-66.04" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="-66.04" y1="25.4" x2="-83.82" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="-83.82" y1="25.4" x2="-93.98" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="-93.98" y1="25.4" x2="-109.22" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="-48.26" y1="22.86" x2="-10.16" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="-48.26" y1="22.86" x2="-48.26" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="-48.26" y1="5.08" x2="-48.26" y2="-12.7" width="0.1524" layer="91"/>
-<wire x1="-48.26" y1="-12.7" x2="-55.88" y2="-12.7" width="0.1524" layer="91"/>
 <pinref part="EEPROM" gate="G$1" pin="VCC"/>
-<wire x1="-55.88" y1="-12.7" x2="-66.04" y2="-12.7" width="0.1524" layer="91"/>
-<wire x1="-66.04" y1="-12.7" x2="-93.98" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="-93.98" y1="-12.7" x2="-109.22" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="172.72" y1="45.72" x2="172.72" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="172.72" y1="50.8" x2="132.08" y2="50.8" width="0.1524" layer="91"/>
@@ -4445,31 +4434,17 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <pinref part="10EEPROM" gate="G$1" pin="1"/>
 <pinref part="I2C2" gate="G$1" pin="1"/>
 <pinref part="I2C" gate="G$1" pin="1"/>
-<pinref part="5WAYSWITCH" gate="G$1" pin="BTN"/>
-<wire x1="-48.26" y1="5.08" x2="-58.42" y2="5.08" width="0.1524" layer="91"/>
-<pinref part="I2C5" gate="G$1" pin="2"/>
-<junction x="-66.04" y="-12.7"/>
-<pinref part="I2C5" gate="G$1" pin="1"/>
-<junction x="-55.88" y="-12.7"/>
-<pinref part="5WAYSWITCH" gate="G$1" pin="R"/>
-<wire x1="-58.42" y1="0" x2="-55.88" y2="0" width="0.1524" layer="91"/>
-<wire x1="-55.88" y1="25.4" x2="-55.88" y2="0" width="0.1524" layer="91"/>
-<pinref part="I2C4" gate="G$1" pin="2"/>
-<junction x="-66.04" y="25.4"/>
-<pinref part="I2C4" gate="G$1" pin="1"/>
-<junction x="-55.88" y="25.4"/>
 <pinref part="I2C3" gate="G$1" pin="2"/>
-<pinref part="U$1" gate="G$1" pin="P12"/>
-<wire x1="10.16" y1="53.34" x2="-20.32" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="-10.16" y1="22.86" x2="-10.16" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="P15"/>
-<wire x1="-10.16" y1="45.72" x2="10.16" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="I2C1" gate="G$1" pin="2"/>
-<junction x="-93.98" y="25.4"/>
-<pinref part="I2C1" gate="G$1" pin="1"/>
-<junction x="-83.82" y="25.4"/>
 <pinref part="I2C6" gate="G$1" pin="2"/>
 <wire x1="-93.98" y1="-12.7" x2="-93.98" y2="-17.78" width="0.1524" layer="91"/>
+<pinref part="I2C1" gate="G$1" pin="2"/>
+<wire x1="-93.98" y1="27.94" x2="-109.22" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="I2C4" gate="G$1" pin="2"/>
+<wire x1="-66.04" y1="25.4" x2="-81.28" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="-81.28" y1="25.4" x2="-81.28" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-81.28" y1="22.86" x2="-109.22" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="I2C5" gate="G$1" pin="1"/>
+<wire x1="-93.98" y1="-12.7" x2="-68.58" y2="-12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -4572,6 +4547,8 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <wire x1="-12.7" y1="27.94" x2="-12.7" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="P14"/>
 <wire x1="-12.7" y1="48.26" x2="10.16" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="I2C1" gate="G$1" pin="1"/>
+<junction x="-83.82" y="27.94"/>
 </segment>
 </net>
 <net name="N$15" class="0">
@@ -4603,6 +4580,33 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <wire x1="-30.48" y1="58.42" x2="7.62" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="-30.48" y1="58.42" x2="-30.48" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="-30.48" y1="12.7" x2="-88.9" y2="12.7" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$20" class="0">
+<segment>
+<pinref part="5WAYSWITCH" gate="G$1" pin="R"/>
+<wire x1="-58.42" y1="0" x2="-55.88" y2="0" width="0.1524" layer="91"/>
+<wire x1="-55.88" y1="25.4" x2="-55.88" y2="0" width="0.1524" layer="91"/>
+<pinref part="I2C4" gate="G$1" pin="1"/>
+<junction x="-55.88" y="25.4"/>
+<pinref part="U$1" gate="G$1" pin="P12"/>
+<wire x1="10.16" y1="53.34" x2="-20.32" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="25.4" x2="-20.32" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="25.4" x2="-55.88" y2="25.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$21" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="P15"/>
+<wire x1="-10.16" y1="45.72" x2="10.16" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="5WAYSWITCH" gate="G$1" pin="BTN"/>
+<wire x1="-48.26" y1="5.08" x2="-58.42" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="22.86" x2="-48.26" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="22.86" x2="-10.16" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="22.86" x2="-10.16" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="I2C5" gate="G$1" pin="2"/>
+<wire x1="-58.42" y1="-12.7" x2="-48.26" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="-12.7" x2="-48.26" y2="5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

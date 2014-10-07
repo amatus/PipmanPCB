@@ -654,8 +654,8 @@ design rules under a new name.</description>
 <element name="I2C5" library="adafruit" package="R1005" value="" x="73.66" y="19.685"/>
 <element name="I2C4" library="adafruit" package="R1005" value="" x="73.66" y="16.51"/>
 <element name="I2C3" library="adafruit" package="R1005" value="" x="74.93" y="13.97"/>
-<element name="I2C1" library="adafruit" package="R1005" value="" x="31.75" y="0"/>
 <element name="I2C6" library="adafruit" package="R1005" value="" x="31.75" y="-3.81"/>
+<element name="I2C1" library="adafruit" package="R1005" value="" x="31.75" y="-7.62"/>
 </elements>
 <signals>
 <signal name="VDD">
@@ -731,31 +731,16 @@ design rules under a new name.</description>
 <wire x1="40.005" y1="53.34" x2="40.005" y2="51.435" width="0.254" layer="1"/>
 <wire x1="40.005" y1="51.435" x2="40.64" y2="51.435" width="0.254" layer="1"/>
 <wire x1="75.565" y1="19.685" x2="75.565" y2="22.225" width="0.254" layer="1"/>
-<contactref element="5WAYSWITCH" pad="BTN"/>
-<contactref element="I2C5" pad="2"/>
-<contactref element="I2C5" pad="1"/>
-<wire x1="73.01" y1="19.51" x2="73.01" y2="19.685" width="0.254" layer="1"/>
-<wire x1="74.31" y1="19.685" x2="75.565" y2="19.685" width="0.254" layer="1"/>
-<contactref element="5WAYSWITCH" pad="R"/>
-<contactref element="I2C4" pad="2"/>
-<contactref element="I2C4" pad="1"/>
-<wire x1="74.31" y1="16.51" x2="80.645" y2="16.51" width="0.254" layer="1"/>
 <contactref element="I2C3" pad="2"/>
-<contactref element="U$1" pad="13"/>
-<contactref element="U$1" pad="16"/>
-<contactref element="I2C1" pad="2"/>
-<contactref element="I2C1" pad="1"/>
 <wire x1="75.58" y1="13.97" x2="80.645" y2="13.97" width="0.254" layer="1"/>
 <contactref element="I2C6" pad="2"/>
-<wire x1="52.2" y1="38.5313" x2="54.15" y2="38.5313" width="0" layer="19" extent="1-1"/>
-<wire x1="58.42" y1="32.385" x2="54.15" y2="38.5313" width="0" layer="19" extent="1-1"/>
-<wire x1="73.01" y1="19.685" x2="74.31" y2="19.685" width="0" layer="19" extent="1-1"/>
-<wire x1="73.01" y1="16.51" x2="74.31" y2="16.51" width="0" layer="19" extent="1-1"/>
-<wire x1="70.77" y1="19.51" x2="73.01" y2="19.685" width="0" layer="19" extent="1-1"/>
-<wire x1="70.77" y1="16.51" x2="73.01" y2="16.51" width="0" layer="19" extent="1-1"/>
-<wire x1="32.4" y1="0" x2="40.64" y2="10.795" width="0" layer="19" extent="1-1"/>
-<wire x1="31.1" y1="0" x2="32.4" y2="0" width="0" layer="19" extent="1-1"/>
-<wire x1="32.4" y1="-3.81" x2="32.4" y2="0" width="0" layer="19" extent="1-1"/>
+<contactref element="I2C1" pad="2"/>
+<contactref element="I2C4" pad="2"/>
+<contactref element="I2C5" pad="1"/>
+<wire x1="75.58" y1="13.97" x2="74.31" y2="16.51" width="0" layer="19" extent="1-1"/>
+<wire x1="73.01" y1="19.685" x2="75.565" y2="19.685" width="0" layer="19" extent="1-1"/>
+<wire x1="32.4" y1="-3.81" x2="40.64" y2="10.795" width="0" layer="19" extent="1-1"/>
+<wire x1="32.4" y1="-7.62" x2="32.4" y2="-3.81" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 <contactref element="U$1" pad="28"/>
@@ -995,7 +980,9 @@ design rules under a new name.</description>
 <signal name="N$14">
 <contactref element="5WAYSWITCH" pad="U"/>
 <contactref element="U$1" pad="15"/>
+<contactref element="I2C1" pad="1"/>
 <wire x1="58.77" y1="19.51" x2="53.5" y2="38.5313" width="0" layer="19" extent="1-1"/>
+<wire x1="31.1" y1="-7.62" x2="58.77" y2="19.51" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$15">
 <contactref element="U$1" pad="14"/>
@@ -1019,6 +1006,20 @@ design rules under a new name.</description>
 <wire x1="53.975" y1="16.51" x2="53.975" y2="35.56" width="0.254" layer="1"/>
 <wire x1="53.975" y1="35.56" x2="51.55" y2="35.56" width="0.254" layer="1"/>
 <wire x1="51.55" y1="35.56" x2="51.55" y2="38.5313" width="0.254" layer="1"/>
+</signal>
+<signal name="N$20">
+<contactref element="5WAYSWITCH" pad="R"/>
+<contactref element="I2C4" pad="1"/>
+<contactref element="U$1" pad="13"/>
+<wire x1="70.77" y1="16.51" x2="52.2" y2="38.5313" width="0" layer="19" extent="1-1"/>
+<wire x1="73.01" y1="16.51" x2="70.77" y2="16.51" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$21">
+<contactref element="5WAYSWITCH" pad="BTN"/>
+<contactref element="U$1" pad="16"/>
+<contactref element="I2C5" pad="2"/>
+<wire x1="70.77" y1="19.51" x2="54.15" y2="38.5313" width="0" layer="19" extent="1-1"/>
+<wire x1="74.31" y1="19.685" x2="70.77" y2="19.51" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <errors>

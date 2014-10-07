@@ -3816,57 +3816,6 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 </deviceset>
 </devicesets>
 </library>
-<library name="HMC6343Board">
-<packages>
-<package name="HMC6343">
-<pad name="SCL" x="2.54" y="2.54" drill="0.8" shape="square"/>
-<pad name="SDA" x="2.54" y="0" drill="0.8" shape="square"/>
-<pad name="VCC" x="2.54" y="-2.54" drill="0.8" shape="square"/>
-<pad name="GND" x="2.54" y="-5.08" drill="0.8" shape="square"/>
-<wire x1="5.08" y1="11.43" x2="-20.32" y2="11.43" width="0.127" layer="21"/>
-<wire x1="5.08" y1="-13.97" x2="-20.32" y2="-13.97" width="0.127" layer="21"/>
-<wire x1="5.08" y1="11.43" x2="5.08" y2="-13.97" width="0.127" layer="21"/>
-<wire x1="-20.32" y1="11.43" x2="-20.32" y2="-13.97" width="0.127" layer="21"/>
-<text x="-11.43" y="10.16" size="1.27" layer="21">compass</text>
-<text x="0" y="10.16" size="1.27" layer="21">North</text>
-<text x="-2.54" y="-6.35" size="1.27" layer="21">gnd</text>
-</package>
-</packages>
-<symbols>
-<symbol name="HMC6343">
-<wire x1="-10.16" y1="7.62" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="-10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-10.16" x2="10.16" y2="7.62" width="0.254" layer="94"/>
-<wire x1="10.16" y1="7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
-<pin name="SCL" x="15.24" y="2.54" length="middle" rot="R180"/>
-<pin name="SDA" x="15.24" y="0" length="middle" rot="R180"/>
-<pin name="VCC" x="15.24" y="-2.54" length="middle" rot="R180"/>
-<pin name="GND" x="15.24" y="-5.08" length="middle" rot="R180"/>
-<text x="-10.16" y="10.16" size="1.778" layer="95">&gt;Name</text>
-<text x="-10.16" y="-15.24" size="1.778" layer="96">&gt;Value</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="HMC6343">
-<gates>
-<gate name="G$1" symbol="HMC6343" x="0" y="2.54"/>
-</gates>
-<devices>
-<device name="" package="HMC6343">
-<connects>
-<connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="SCL" pad="SCL"/>
-<connect gate="G$1" pin="SDA" pad="SDA"/>
-<connect gate="G$1" pin="VCC" pad="VCC"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="SFTemp">
 <packages>
 <package name="SFTEMP">
@@ -4190,6 +4139,118 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 </deviceset>
 </devicesets>
 </library>
+<library name="SparkFun">
+<packages>
+<package name="LCC36">
+<circle x="-0.508" y="0" radius="0.3592" width="0.127" layer="51"/>
+<circle x="-0.5" y="0" radius="0.1" width="0.2032" layer="51"/>
+<wire x1="-4.5" y1="4.5" x2="-4.5" y2="-4.5" width="0.127" layer="51"/>
+<wire x1="-4.5" y1="-4.5" x2="4.5" y2="-4.5" width="0.127" layer="51"/>
+<wire x1="4.5" y1="-4.5" x2="4.5" y2="4.5" width="0.127" layer="51"/>
+<wire x1="4.5" y1="4.5" x2="-4.5" y2="4.5" width="0.127" layer="51"/>
+<wire x1="-4.572" y1="3.683" x2="-4.572" y2="3.937" width="0.2032" layer="21"/>
+<wire x1="-4.572" y1="3.937" x2="-3.937" y2="4.572" width="0.2032" layer="21"/>
+<wire x1="-3.937" y1="4.572" x2="-3.683" y2="4.572" width="0.2032" layer="21"/>
+<wire x1="3.683" y1="4.572" x2="4.572" y2="4.572" width="0.2032" layer="21"/>
+<wire x1="4.572" y1="4.572" x2="4.572" y2="3.683" width="0.2032" layer="21"/>
+<wire x1="4.572" y1="-3.683" x2="4.572" y2="-4.572" width="0.2032" layer="21"/>
+<wire x1="4.572" y1="-4.572" x2="3.683" y2="-4.572" width="0.2032" layer="21"/>
+<wire x1="-4.572" y1="-3.683" x2="-4.572" y2="-4.572" width="0.2032" layer="21"/>
+<wire x1="-4.572" y1="-4.572" x2="-3.683" y2="-4.572" width="0.2032" layer="21"/>
+<wire x1="0" y1="0" x2="0" y2="2.032" width="0.127" layer="51"/>
+<wire x1="-0.254" y1="1.778" x2="0" y2="2.032" width="0.127" layer="51"/>
+<wire x1="0" y1="2.032" x2="0.254" y2="1.778" width="0.127" layer="51"/>
+<wire x1="0" y1="0" x2="2.032" y2="0" width="0.127" layer="51"/>
+<wire x1="1.778" y1="0.254" x2="2.032" y2="0" width="0.127" layer="51"/>
+<wire x1="2.032" y1="0" x2="1.778" y2="-0.254" width="0.127" layer="51"/>
+<smd name="1" x="-4.4" y="3.2" dx="0.42" dy="1" layer="1" rot="R90"/>
+<smd name="2" x="-4.4" y="2.4" dx="0.42" dy="1" layer="1" rot="R90"/>
+<smd name="3" x="-4.4" y="1.6" dx="0.42" dy="1" layer="1" rot="R90"/>
+<smd name="4" x="-4.4" y="0.8" dx="0.42" dy="1" layer="1" rot="R90"/>
+<smd name="5" x="-4.4" y="0" dx="0.42" dy="1" layer="1" rot="R90"/>
+<smd name="6" x="-4.4" y="-0.8" dx="0.42" dy="1" layer="1" rot="R90"/>
+<smd name="7" x="-4.4" y="-1.6" dx="0.42" dy="1" layer="1" rot="R90"/>
+<smd name="8" x="-4.4" y="-2.4" dx="0.42" dy="1" layer="1" rot="R90"/>
+<smd name="9" x="-4.4" y="-3.2" dx="0.42" dy="1" layer="1" rot="R90"/>
+<smd name="10" x="-3.2" y="-4.4" dx="0.42" dy="1" layer="1" rot="R180"/>
+<smd name="11" x="-2.4" y="-4.4" dx="0.42" dy="1" layer="1" rot="R180"/>
+<smd name="12" x="-1.6" y="-4.4" dx="0.42" dy="1" layer="1" rot="R180"/>
+<smd name="13" x="-0.8" y="-4.4" dx="0.42" dy="1" layer="1" rot="R180"/>
+<smd name="14" x="0" y="-4.4" dx="0.42" dy="1" layer="1" rot="R180"/>
+<smd name="15" x="0.8" y="-4.4" dx="0.42" dy="1" layer="1" rot="R180"/>
+<smd name="16" x="1.6" y="-4.4" dx="0.42" dy="1" layer="1" rot="R180"/>
+<smd name="17" x="2.4" y="-4.4" dx="0.42" dy="1" layer="1" rot="R180"/>
+<smd name="18" x="3.2" y="-4.4" dx="0.42" dy="1" layer="1" rot="R180"/>
+<smd name="19" x="4.4" y="-3.2" dx="0.42" dy="1" layer="1" rot="R270"/>
+<smd name="20" x="4.4" y="-2.4" dx="0.42" dy="1" layer="1" rot="R270"/>
+<smd name="21" x="4.4" y="-1.6" dx="0.42" dy="1" layer="1" rot="R270"/>
+<smd name="22" x="4.4" y="-0.8" dx="0.42" dy="1" layer="1" rot="R270"/>
+<smd name="23" x="4.4" y="0" dx="0.42" dy="1" layer="1" rot="R270"/>
+<smd name="24" x="4.4" y="0.8" dx="0.42" dy="1" layer="1" rot="R270"/>
+<smd name="25" x="4.4" y="1.6" dx="0.42" dy="1" layer="1" rot="R270"/>
+<smd name="26" x="4.4" y="2.4" dx="0.42" dy="1" layer="1" rot="R270"/>
+<smd name="27" x="4.4" y="3.2" dx="0.42" dy="1" layer="1" rot="R270"/>
+<smd name="28" x="3.2" y="4.4" dx="0.42" dy="1" layer="1"/>
+<smd name="29" x="2.4" y="4.4" dx="0.42" dy="1" layer="1"/>
+<smd name="30" x="1.6" y="4.4" dx="0.42" dy="1" layer="1"/>
+<smd name="31" x="0.8" y="4.4" dx="0.42" dy="1" layer="1"/>
+<smd name="32" x="0" y="4.4" dx="0.42" dy="1" layer="1"/>
+<smd name="33" x="-0.8" y="4.4" dx="0.42" dy="1" layer="1"/>
+<smd name="34" x="-1.6" y="4.4" dx="0.42" dy="1" layer="1"/>
+<smd name="35" x="-2.4" y="4.4" dx="0.42" dy="1" layer="1"/>
+<smd name="36" x="-3.2" y="4.4" dx="0.42" dy="1" layer="1"/>
+<text x="-1.27" y="-0.254" size="0.3048" layer="51">Z</text>
+<text x="2.3" y="-0.114" size="0.3048" layer="51">X</text>
+<text x="-0.014" y="2.2" size="0.3048" layer="51">Y</text>
+<text x="-4.572" y="5.334" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-4.572" y="-5.842" size="0.4064" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="HMC6343">
+<wire x1="-10.16" y1="-10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-10.16" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="7.62" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
+<pin name="CS" x="15.24" y="-2.54" visible="pin" length="middle" rot="R180"/>
+<pin name="CSC" x="15.24" y="-5.08" visible="pin" length="middle" rot="R180"/>
+<pin name="GND@25" x="-15.24" y="-5.08" visible="pin" length="middle"/>
+<pin name="GND@29" x="-15.24" y="-7.62" visible="pin" length="middle"/>
+<pin name="SCL" x="15.24" y="5.08" visible="pin" length="middle" rot="R180"/>
+<pin name="SDA" x="15.24" y="2.54" visible="pin" length="middle" rot="R180"/>
+<pin name="VDD@3" x="-15.24" y="5.08" visible="pin" length="middle"/>
+<pin name="VDD@11" x="-15.24" y="0" visible="pin" length="middle"/>
+<pin name="VDD@21" x="-15.24" y="2.54" visible="pin" length="middle"/>
+<text x="-9.398" y="8.128" size="1.778" layer="95">&gt;NAME</text>
+<text x="-9.906" y="-12.446" size="1.778" layer="95">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="HMC6343">
+<gates>
+<gate name="G$1" symbol="HMC6343" x="0" y="0"/>
+</gates>
+<devices>
+<device name="A" package="LCC36">
+<connects>
+<connect gate="G$1" pin="CS" pad="22"/>
+<connect gate="G$1" pin="CSC" pad="35"/>
+<connect gate="G$1" pin="GND@25" pad="25"/>
+<connect gate="G$1" pin="GND@29" pad="29"/>
+<connect gate="G$1" pin="SCL" pad="32"/>
+<connect gate="G$1" pin="SDA" pad="36"/>
+<connect gate="G$1" pin="VDD@11" pad="11"/>
+<connect gate="G$1" pin="VDD@21" pad="21"/>
+<connect gate="G$1" pin="VDD@3" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -4203,7 +4264,6 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <part name="U$1" library="parallax_propeller" deviceset="P8X32A-M44" device=""/>
 <part name="RTC" library="adafruit" deviceset="DS1302" device=""/>
 <part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
-<part name="COMPASS" library="HMC6343Board" deviceset="HMC6343" device=""/>
 <part name="THERMO" library="SFTemp" deviceset="SFTEMP" device=""/>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="GPS" library="adafruit" deviceset="GPS_FGPMMOPA6B" device=""/>
@@ -4223,6 +4283,7 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <part name="I2C3" library="adafruit" deviceset="R-US_" device="R1005"/>
 <part name="I2C6" library="adafruit" deviceset="R-US_" device="R1005"/>
 <part name="I2C1" library="adafruit" deviceset="R-US_" device="R1005"/>
+<part name="U$2" library="SparkFun" deviceset="HMC6343" device="A"/>
 </parts>
 <sheets>
 <sheet>
@@ -4235,7 +4296,6 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <instance part="U$1" gate="G$1" x="25.4" y="63.5"/>
 <instance part="RTC" gate="G$1" x="68.58" y="15.24" rot="R180"/>
 <instance part="SUPPLY2" gate="GND" x="-45.72" y="99.06" rot="R270"/>
-<instance part="COMPASS" gate="G$1" x="-27.94" y="-2.54"/>
 <instance part="THERMO" gate="G$1" x="2.54" y="-30.48" rot="R90"/>
 <instance part="P+1" gate="VCC" x="-35.56" y="88.9"/>
 <instance part="GPS" gate="G$1" x="175.26" y="73.66"/>
@@ -4255,6 +4315,7 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <instance part="I2C3" gate="G$1" x="-93.98" y="10.16" rot="R180"/>
 <instance part="I2C6" gate="G$1" x="-88.9" y="-17.78" rot="R180"/>
 <instance part="I2C1" gate="G$1" x="-88.9" y="27.94" rot="R180"/>
+<instance part="U$2" gate="G$1" x="-25.4" y="0"/>
 </instances>
 <busses>
 </busses>
@@ -4280,11 +4341,11 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <pinref part="SUPPLY2" gate="GND" pin="GND"/>
 <wire x1="-43.18" y1="99.06" x2="53.34" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="-43.18" y1="99.06" x2="-43.18" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="COMPASS" gate="G$1" pin="GND"/>
 <wire x1="-43.18" y1="63.5" x2="-43.18" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="-43.18" y1="30.48" x2="-43.18" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="-43.18" y1="-5.08" x2="-43.18" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="-43.18" y1="-15.24" x2="-12.7" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="-15.24" x2="-40.64" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="-15.24" x2="-12.7" y2="-15.24" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="-15.24" x2="-12.7" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="-15.24" x2="-7.62" y2="-15.24" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="-15.24" x2="-7.62" y2="-17.78" width="0.1524" layer="91"/>
@@ -4332,6 +4393,10 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <pinref part="S1" gate="1" pin="O"/>
 <wire x1="-88.9" y1="83.82" x2="-86.36" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="-86.36" y1="83.82" x2="-86.36" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="GND@29"/>
+<wire x1="-40.64" y1="-7.62" x2="-40.64" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="GND@25"/>
+<wire x1="-40.64" y1="-7.62" x2="-40.64" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -4365,13 +4430,14 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <pinref part="U$1" gate="G$1" pin="P0"/>
 <wire x1="-12.7" y1="83.82" x2="-2.54" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="83.82" x2="-2.54" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="-2.54" y1="83.82" x2="-2.54" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="83.82" x2="-2.54" y2="5.08" width="0.1524" layer="91"/>
 <label x="-2.54" y="40.64" size="1.778" layer="95"/>
-<pinref part="COMPASS" gate="G$1" pin="SCL"/>
-<wire x1="-12.7" y1="0" x2="-2.54" y2="0" width="0.1524" layer="91"/>
 <pinref part="THERMO" gate="G$1" pin="SCL"/>
+<wire x1="-2.54" y1="5.08" x2="-2.54" y2="-17.78" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="0" x2="-2.54" y2="-17.78" width="0.1524" layer="91"/>
 <pinref part="I2C2" gate="G$1" pin="2"/>
+<pinref part="U$2" gate="G$1" pin="SCL"/>
+<wire x1="-10.16" y1="5.08" x2="-2.54" y2="5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -4379,15 +4445,15 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <wire x1="-5.08" y1="76.2" x2="0" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="0" y1="76.2" x2="0" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="0" y1="81.28" x2="2.54" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="2.54" y1="81.28" x2="2.54" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="81.28" x2="2.54" y2="2.54" width="0.1524" layer="91"/>
 <label x="2.54" y="20.32" size="1.778" layer="95"/>
-<pinref part="COMPASS" gate="G$1" pin="SDA"/>
-<wire x1="-12.7" y1="-2.54" x2="2.54" y2="-2.54" width="0.1524" layer="91"/>
-<wire x1="2.54" y1="-2.54" x2="2.54" y2="-17.78" width="0.1524" layer="91"/>
 <pinref part="THERMO" gate="G$1" pin="SDA"/>
 <pinref part="U$1" gate="G$1" pin="P1"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="-17.78" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="81.28" x2="2.54" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="I2C" gate="G$1" pin="2"/>
+<pinref part="U$2" gate="G$1" pin="SDA"/>
+<wire x1="-10.16" y1="2.54" x2="2.54" y2="2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -4400,7 +4466,8 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <wire x1="-33.02" y1="76.2" x2="-15.24" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="-33.02" y1="76.2" x2="-33.02" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="-33.02" y1="55.88" x2="-33.02" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="-33.02" y1="15.24" x2="20.32" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="-33.02" y1="15.24" x2="-17.78" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="15.24" x2="20.32" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="15.24" x2="20.32" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="10.16" x2="20.32" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="-5.08" x2="7.62" y2="-5.08" width="0.1524" layer="91"/>
@@ -4429,8 +4496,6 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <wire x1="132.08" y1="50.8" x2="114.3" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="50.8" x2="114.3" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="91.44" x2="114.3" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="COMPASS" gate="G$1" pin="VCC"/>
-<wire x1="7.62" y1="-5.08" x2="-12.7" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="10EEPROM" gate="G$1" pin="1"/>
 <pinref part="I2C2" gate="G$1" pin="1"/>
 <pinref part="I2C" gate="G$1" pin="1"/>
@@ -4445,6 +4510,12 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <wire x1="-81.28" y1="22.86" x2="-109.22" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="I2C5" gate="G$1" pin="1"/>
 <wire x1="-93.98" y1="-12.7" x2="-68.58" y2="-12.7" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="VDD@11"/>
+<pinref part="U$2" gate="G$1" pin="VDD@3"/>
+<wire x1="-40.64" y1="0" x2="-40.64" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="5.08" x2="-40.64" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="10.16" x2="-17.78" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="10.16" x2="-17.78" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -4607,6 +4678,15 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <pinref part="I2C5" gate="G$1" pin="2"/>
 <wire x1="-58.42" y1="-12.7" x2="-48.26" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="-12.7" x2="-48.26" y2="5.08" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<wire x1="-12.7" y1="-2.54" x2="-10.16" y2="-2.54" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="CS"/>
+<wire x1="-10.16" y1="-5.08" x2="-12.7" y2="-5.08" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="CSC"/>
+<wire x1="-10.16" y1="-2.54" x2="-10.16" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
