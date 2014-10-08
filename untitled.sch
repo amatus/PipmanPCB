@@ -1435,41 +1435,6 @@ Source: 008-0260-0_E.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="supply2">
-<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
-GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
-Please keep in mind, that these devices are necessary for the
-automatic wiring of the supply signals.&lt;p&gt;
-The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
-In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-</packages>
-<symbols>
-<symbol name="GND">
-<wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="1.27" y1="0" x2="0" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="0" y1="-1.27" x2="-1.27" y2="0" width="0.254" layer="94"/>
-<text x="-1.905" y="-3.175" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="GND" prefix="SUPPLY">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="GND" symbol="GND" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="adafruit">
 <packages>
 <package name="DIL08-ROUND">
@@ -3872,18 +3837,37 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <packages>
 </packages>
 <symbols>
-<symbol name="VCC">
+<symbol name="+5V">
 <wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
 <wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
-<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<pin name="VCC" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="+5V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
+<symbol name="+3V3">
+<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="+3V3" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="VCC" prefix="P+">
+<deviceset name="+5V" prefix="P+">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
-<gate name="VCC" symbol="VCC" x="0" y="0"/>
+<gate name="1" symbol="+5V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="+3V3" prefix="+3V3">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="+3V3" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -4251,6 +4235,41 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 </deviceset>
 </devicesets>
 </library>
+<library name="supply2">
+<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
+GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
+Please keep in mind, that these devices are necessary for the
+automatic wiring of the supply signals.&lt;p&gt;
+The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
+In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="GND">
+<wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="0" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.27" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<text x="-1.905" y="-3.175" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="GND" prefix="SUPPLY">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="GND" symbol="GND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -4263,9 +4282,7 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <parts>
 <part name="U$1" library="parallax_propeller" deviceset="P8X32A-M44" device=""/>
 <part name="RTC" library="adafruit" deviceset="DS1302" device=""/>
-<part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
 <part name="THERMO" library="SFTemp" deviceset="SFTEMP" device=""/>
-<part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="GPS" library="adafruit" deviceset="GPS_FGPMMOPA6B" device=""/>
 <part name="USB" library="4pinUSB" deviceset="4PINUSB" device=""/>
 <part name="OLED_SCREEN" library="4dScreen" deviceset="4DSCREEN" device=""/>
@@ -4284,31 +4301,40 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <part name="I2C6" library="adafruit" deviceset="R-US_" device="R1005"/>
 <part name="I2C1" library="adafruit" deviceset="R-US_" device="R1005"/>
 <part name="U$2" library="SparkFun" deviceset="HMC6343" device="A"/>
+<part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
+<part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
+<part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
+<part name="SUPPLY4" library="supply2" deviceset="GND" device=""/>
+<part name="SUPPLY5" library="supply2" deviceset="GND" device=""/>
+<part name="SUPPLY6" library="supply2" deviceset="GND" device=""/>
+<part name="P+2" library="supply1" deviceset="+5V" device=""/>
+<part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V3" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V4" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V7" library="supply1" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="-38.1" y="91.44" size="1.778" layer="91" rot="R90">3.3</text>
-<text x="-76.2" y="99.06" size="1.778" layer="91">5V</text>
-<text x="-109.22" y="17.78" size="1.778" layer="91" rot="R90">3.3V</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="25.4" y="63.5"/>
 <instance part="RTC" gate="G$1" x="68.58" y="15.24" rot="R180"/>
-<instance part="SUPPLY2" gate="GND" x="-43.18" y="101.6" rot="R180"/>
 <instance part="THERMO" gate="G$1" x="2.54" y="-30.48" rot="R90"/>
-<instance part="P+1" gate="VCC" x="-35.56" y="88.9"/>
 <instance part="GPS" gate="G$1" x="175.26" y="73.66"/>
 <instance part="USB" gate="G$1" x="43.18" y="106.68" rot="R270"/>
 <instance part="OLED_SCREEN" gate="G$1" x="-68.58" y="68.58"/>
 <instance part="LIPOCHARGER-BOOSTER" gate="G$1" x="-111.76" y="96.52"/>
-<instance part="3.3LDO" gate="G$1" x="-58.42" y="45.72" rot="R180"/>
+<instance part="3.3LDO" gate="G$1" x="-66.04" y="88.9" rot="R270"/>
 <instance part="5WAYSWITCH" gate="G$1" x="-71.12" y="0"/>
 <instance part="EEPROM" gate="G$1" x="165.1" y="27.94"/>
 <instance part="S1" gate="1" x="-93.98" y="81.28" rot="R270"/>
 <instance part="Q1" gate="G$1" x="58.42" y="40.64" rot="R90"/>
 <instance part="10EEPROM" gate="G$1" x="137.16" y="25.4"/>
-<instance part="I2C2" gate="G$1" x="-17.78" y="83.82"/>
+<instance part="I2C2" gate="G$1" x="-10.16" y="83.82"/>
 <instance part="I2C" gate="G$1" x="-10.16" y="76.2"/>
 <instance part="I2C5" gate="G$1" x="-63.5" y="-12.7"/>
 <instance part="I2C4" gate="G$1" x="-60.96" y="25.4" rot="R180"/>
@@ -4316,6 +4342,20 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <instance part="I2C6" gate="G$1" x="-88.9" y="-17.78" rot="R180"/>
 <instance part="I2C1" gate="G$1" x="-88.9" y="27.94" rot="R180"/>
 <instance part="U$2" gate="G$1" x="-25.4" y="0"/>
+<instance part="SUPPLY1" gate="GND" x="-86.36" y="73.66"/>
+<instance part="SUPPLY2" gate="GND" x="-58.42" y="60.96"/>
+<instance part="SUPPLY3" gate="GND" x="48.26" y="27.94"/>
+<instance part="SUPPLY4" gate="GND" x="-43.18" y="-20.32"/>
+<instance part="SUPPLY5" gate="GND" x="53.34" y="96.52"/>
+<instance part="SUPPLY6" gate="GND" x="165.1" y="10.16"/>
+<instance part="P+2" gate="1" x="-83.82" y="104.14"/>
+<instance part="+3V1" gate="G$1" x="-76.2" y="104.14"/>
+<instance part="+3V2" gate="G$1" x="-109.22" y="33.02"/>
+<instance part="+3V3" gate="G$1" x="-25.4" y="96.52"/>
+<instance part="+3V4" gate="G$1" x="-43.18" y="10.16"/>
+<instance part="+3V5" gate="G$1" x="7.62" y="-10.16"/>
+<instance part="+3V6" gate="G$1" x="48.26" y="15.24"/>
+<instance part="+3V7" gate="G$1" x="154.94" y="88.9"/>
 </instances>
 <busses>
 </busses>
@@ -4334,81 +4374,6 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <pinref part="U$1" gate="G$1" pin="XO"/>
 <wire x1="58.42" y1="38.1" x2="43.18" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="Q1" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="GND" class="0">
-<segment>
-<pinref part="SUPPLY2" gate="GND" pin="GND"/>
-<wire x1="-43.18" y1="99.06" x2="53.34" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="-43.18" y1="99.06" x2="-43.18" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="-43.18" y1="63.5" x2="-43.18" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="-43.18" y1="30.48" x2="-43.18" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="-43.18" y1="-5.08" x2="-43.18" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="-43.18" y1="-15.24" x2="-40.64" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="-40.64" y1="-15.24" x2="-7.62" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="-7.62" y1="-15.24" x2="-7.62" y2="-17.78" width="0.1524" layer="91"/>
-<pinref part="RTC" gate="G$1" pin="GND"/>
-<wire x1="68.58" y1="30.48" x2="-43.18" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="THERMO" gate="G$1" pin="GND"/>
-<pinref part="GPS" gate="G$1" pin="GND@2"/>
-<wire x1="160.02" y1="66.04" x2="127" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="127" y1="66.04" x2="99.06" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="66.04" x2="99.06" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="99.06" x2="53.34" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="USB" gate="G$1" pin="VSS"/>
-<wire x1="53.34" y1="104.14" x2="53.34" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="OLED_SCREEN" gate="G$1" pin="GND"/>
-<wire x1="-60.96" y1="63.5" x2="-43.18" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="LIPOCHARGER-BOOSTER" gate="G$1" pin="P$3"/>
-<wire x1="-104.14" y1="93.98" x2="-86.36" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="-86.36" y1="93.98" x2="-78.74" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="-78.74" y1="93.98" x2="-50.8" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="-50.8" y1="93.98" x2="-50.8" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="-50.8" y1="99.06" x2="-43.18" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="-78.74" y1="93.98" x2="-78.74" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="-78.74" y1="30.48" x2="-45.72" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="-45.72" y1="30.48" x2="-45.72" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="3.3LDO" gate="G$1" pin="GND"/>
-<wire x1="-45.72" y1="53.34" x2="-53.34" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="5WAYSWITCH" gate="G$1" pin="GND"/>
-<wire x1="-58.42" y1="-5.08" x2="-43.18" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="127" y1="66.04" x2="127" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="EEPROM" gate="G$1" pin="GND"/>
-<wire x1="127" y1="45.72" x2="127" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="127" y1="12.7" x2="165.1" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="EEPROM" gate="G$1" pin="X1"/>
-<wire x1="160.02" y1="45.72" x2="127" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="EEPROM" gate="G$1" pin="X2"/>
-<wire x1="160.02" y1="45.72" x2="165.1" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="EEPROM" gate="G$1" pin="VBAT"/>
-<wire x1="180.34" y1="25.4" x2="180.34" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="180.34" y1="17.78" x2="180.34" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="180.34" y1="12.7" x2="165.1" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="EEPROM" gate="G$1" pin="SQW/OUT"/>
-<wire x1="180.34" y1="30.48" x2="182.88" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="30.48" x2="182.88" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="17.78" x2="180.34" y2="17.78" width="0.1524" layer="91"/>
-<pinref part="S1" gate="1" pin="O"/>
-<wire x1="-88.9" y1="83.82" x2="-86.36" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="-86.36" y1="83.82" x2="-86.36" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="GND@29"/>
-<wire x1="-40.64" y1="-7.62" x2="-40.64" y2="-15.24" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="GND@25"/>
-<wire x1="-40.64" y1="-7.62" x2="-40.64" y2="-5.08" width="0.1524" layer="91"/>
-<junction x="-40.64" y="-7.62"/>
-<junction x="-40.64" y="-15.24"/>
-<junction x="-43.18" y="30.48"/>
-<junction x="160.02" y="45.72"/>
-<junction x="180.34" y="17.78"/>
-<junction x="-78.74" y="93.98"/>
-<junction x="-86.36" y="93.98"/>
-<junction x="53.34" y="99.06"/>
-<junction x="165.1" y="12.7"/>
-<junction x="-43.18" y="99.06"/>
-<junction x="-43.18" y="-5.08"/>
-<junction x="127" y="66.04"/>
-<junction x="-43.18" y="63.5"/>
-<junction x="127" y="45.72"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -4440,13 +4405,12 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <net name="SCL" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="P0"/>
-<wire x1="-12.7" y1="83.82" x2="-2.54" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="83.82" x2="-2.54" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="83.82" x2="-2.54" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="83.82" x2="-2.54" y2="5.08" width="0.1524" layer="91"/>
 <label x="-2.54" y="40.64" size="1.778" layer="95"/>
 <pinref part="THERMO" gate="G$1" pin="SCL"/>
-<wire x1="-2.54" y1="5.08" x2="-2.54" y2="0" width="0.1524" layer="91"/>
-<wire x1="-2.54" y1="0" x2="-2.54" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="5.08" x2="-2.54" y2="-17.78" width="0.1524" layer="91"/>
 <pinref part="I2C2" gate="G$1" pin="2"/>
 <pinref part="U$2" gate="G$1" pin="SCL"/>
 <wire x1="-10.16" y1="5.08" x2="-2.54" y2="5.08" width="0.1524" layer="91"/>
@@ -4470,85 +4434,6 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <wire x1="-10.16" y1="2.54" x2="2.54" y2="2.54" width="0.1524" layer="91"/>
 <junction x="2.54" y="2.54"/>
 <junction x="2.54" y="81.28"/>
-</segment>
-</net>
-<net name="VCC" class="0">
-<segment>
-<wire x1="-35.56" y1="86.36" x2="-33.02" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="-33.02" y1="86.36" x2="-25.4" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="86.36" x2="-22.86" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="-22.86" y1="86.36" x2="-22.86" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="-33.02" y1="86.36" x2="-33.02" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="-33.02" y1="76.2" x2="-15.24" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="-33.02" y1="76.2" x2="-33.02" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="-33.02" y1="55.88" x2="-33.02" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="-33.02" y1="15.24" x2="-17.78" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="-17.78" y1="15.24" x2="20.32" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="15.24" x2="20.32" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="10.16" x2="20.32" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="-5.08" x2="7.62" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="7.62" y1="-17.78" x2="7.62" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="10.16" x2="20.32" y2="10.16" width="0.1524" layer="91"/>
-<pinref part="THERMO" gate="G$1" pin="VCC"/>
-<pinref part="P+1" gate="VCC" pin="VCC"/>
-<wire x1="-25.4" y1="86.36" x2="-25.4" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="91.44" x2="50.8" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="91.44" x2="50.8" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="-58.42" y1="53.34" x2="-58.42" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="-58.42" y1="55.88" x2="-33.02" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="GPS" gate="G$1" pin="VCC"/>
-<wire x1="160.02" y1="83.82" x2="50.8" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="-58.42" y1="55.88" x2="-109.22" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="-109.22" y1="55.88" x2="-109.22" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="-109.22" y1="27.94" x2="-109.22" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="-109.22" y1="22.86" x2="-109.22" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="-109.22" y1="10.16" x2="-109.22" y2="-12.7" width="0.1524" layer="91"/>
-<wire x1="-99.06" y1="10.16" x2="-109.22" y2="10.16" width="0.1524" layer="91"/>
-<pinref part="EEPROM" gate="G$1" pin="VCC"/>
-<wire x1="-93.98" y1="-12.7" x2="-109.22" y2="-12.7" width="0.1524" layer="91"/>
-<wire x1="172.72" y1="45.72" x2="172.72" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="172.72" y1="50.8" x2="132.08" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="50.8" x2="132.08" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="50.8" x2="114.3" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="50.8" x2="114.3" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="91.44" x2="114.3" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="10EEPROM" gate="G$1" pin="1"/>
-<pinref part="I2C2" gate="G$1" pin="1"/>
-<pinref part="I2C" gate="G$1" pin="1"/>
-<pinref part="I2C3" gate="G$1" pin="2"/>
-<pinref part="I2C6" gate="G$1" pin="2"/>
-<wire x1="-93.98" y1="-12.7" x2="-93.98" y2="-17.78" width="0.1524" layer="91"/>
-<pinref part="I2C1" gate="G$1" pin="2"/>
-<wire x1="-93.98" y1="27.94" x2="-109.22" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="I2C4" gate="G$1" pin="2"/>
-<wire x1="-66.04" y1="25.4" x2="-81.28" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="-81.28" y1="25.4" x2="-81.28" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="-81.28" y1="22.86" x2="-109.22" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="I2C5" gate="G$1" pin="1"/>
-<wire x1="-93.98" y1="-12.7" x2="-68.58" y2="-12.7" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="VDD@11"/>
-<pinref part="U$2" gate="G$1" pin="VDD@3"/>
-<wire x1="-40.64" y1="0" x2="-40.64" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="-40.64" y1="2.54" x2="-40.64" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="-40.64" y1="5.08" x2="-40.64" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="-40.64" y1="10.16" x2="-17.78" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="-17.78" y1="10.16" x2="-17.78" y2="15.24" width="0.1524" layer="91"/>
-<junction x="-17.78" y="15.24"/>
-<junction x="-109.22" y="10.16"/>
-<junction x="132.08" y="50.8"/>
-<junction x="50.8" y="91.44"/>
-<junction x="-33.02" y="76.2"/>
-<junction x="-33.02" y="55.88"/>
-<junction x="-40.64" y="5.08"/>
-<junction x="-58.42" y="55.88"/>
-<junction x="20.32" y="10.16"/>
-<junction x="-109.22" y="27.94"/>
-<junction x="-33.02" y="86.36"/>
-<junction x="-25.4" y="86.36"/>
-<junction x="-109.22" y="22.86"/>
-<junction x="-93.98" y="-12.7"/>
-<pinref part="U$2" gate="G$1" pin="VDD@21"/>
-<junction x="-40.64" y="2.54"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -4601,19 +4486,6 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <wire x1="5.08" y1="68.58" x2="5.08" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="P4"/>
 <wire x1="10.16" y1="73.66" x2="5.08" y2="73.66" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$12" class="0">
-<segment>
-<pinref part="LIPOCHARGER-BOOSTER" gate="G$1" pin="P$2"/>
-<wire x1="-104.14" y1="99.06" x2="-76.2" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="OLED_SCREEN" gate="G$1" pin="5V"/>
-<wire x1="-76.2" y1="99.06" x2="-60.96" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="-60.96" y1="99.06" x2="-60.96" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="-76.2" y1="99.06" x2="-76.2" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="3.3LDO" gate="G$1" pin="VIN"/>
-<wire x1="-76.2" y1="53.34" x2="-63.5" y2="53.34" width="0.1524" layer="91"/>
-<junction x="-76.2" y="99.06"/>
 </segment>
 </net>
 <net name="N$18" class="0">
@@ -4720,6 +4592,182 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 <pinref part="U$2" gate="G$1" pin="CS"/>
 <pinref part="U$2" gate="G$1" pin="CSC"/>
 <wire x1="-10.16" y1="-2.54" x2="-10.16" y2="-5.08" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="GND" class="0">
+<segment>
+<pinref part="SUPPLY2" gate="GND" pin="GND"/>
+<pinref part="OLED_SCREEN" gate="G$1" pin="GND"/>
+<wire x1="-60.96" y1="63.5" x2="-58.42" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="RTC" gate="G$1" pin="GND"/>
+<wire x1="68.58" y1="30.48" x2="48.26" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="SUPPLY3" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="5WAYSWITCH" gate="G$1" pin="GND"/>
+<wire x1="-58.42" y1="-5.08" x2="-43.18" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="-5.08" x2="-43.18" y2="-7.62" width="0.1524" layer="91"/>
+<pinref part="SUPPLY4" gate="GND" pin="GND"/>
+<pinref part="U$2" gate="G$1" pin="GND@25"/>
+<wire x1="-43.18" y1="-7.62" x2="-43.18" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="-15.24" x2="-43.18" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="-5.08" x2="-43.18" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="-43.18" y="-5.08"/>
+<pinref part="U$2" gate="G$1" pin="GND@29"/>
+<wire x1="-40.64" y1="-7.62" x2="-43.18" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="-43.18" y="-7.62"/>
+<pinref part="THERMO" gate="G$1" pin="GND"/>
+<wire x1="-7.62" y1="-15.24" x2="-7.62" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="-15.24" x2="-43.18" y2="-15.24" width="0.1524" layer="91"/>
+<junction x="-43.18" y="-15.24"/>
+</segment>
+<segment>
+<pinref part="LIPOCHARGER-BOOSTER" gate="G$1" pin="P$3"/>
+<wire x1="-104.14" y1="93.98" x2="-86.36" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="S1" gate="1" pin="O"/>
+<wire x1="-88.9" y1="83.82" x2="-86.36" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="-86.36" y1="83.82" x2="-86.36" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="SUPPLY1" gate="GND" pin="GND"/>
+<wire x1="-86.36" y1="76.2" x2="-86.36" y2="83.82" width="0.1524" layer="91"/>
+<junction x="-86.36" y="83.82"/>
+<pinref part="3.3LDO" gate="G$1" pin="GND"/>
+<wire x1="-86.36" y1="93.98" x2="-73.66" y2="93.98" width="0.1524" layer="91"/>
+<junction x="-86.36" y="93.98"/>
+</segment>
+<segment>
+<pinref part="USB" gate="G$1" pin="VSS"/>
+<wire x1="53.34" y1="104.14" x2="53.34" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="SUPPLY5" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="EEPROM" gate="G$1" pin="GND"/>
+<wire x1="182.88" y1="48.26" x2="182.88" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="30.48" x2="182.88" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="25.4" x2="182.88" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="12.7" x2="165.1" y2="12.7" width="0.1524" layer="91"/>
+<junction x="165.1" y="12.7"/>
+<pinref part="SUPPLY6" gate="GND" pin="GND"/>
+<pinref part="EEPROM" gate="G$1" pin="VBAT"/>
+<wire x1="180.34" y1="25.4" x2="182.88" y2="25.4" width="0.1524" layer="91"/>
+<junction x="182.88" y="25.4"/>
+<pinref part="EEPROM" gate="G$1" pin="SQW/OUT"/>
+<wire x1="180.34" y1="30.48" x2="182.88" y2="30.48" width="0.1524" layer="91"/>
+<junction x="182.88" y="30.48"/>
+<pinref part="EEPROM" gate="G$1" pin="X1"/>
+<wire x1="182.88" y1="48.26" x2="165.1" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="48.26" x2="160.02" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="48.26" x2="160.02" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="EEPROM" gate="G$1" pin="X2"/>
+<wire x1="165.1" y1="45.72" x2="165.1" y2="48.26" width="0.1524" layer="91"/>
+<junction x="165.1" y="48.26"/>
+<pinref part="GPS" gate="G$1" pin="GND@2"/>
+<wire x1="160.02" y1="66.04" x2="154.94" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="66.04" x2="154.94" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="48.26" x2="154.94" y2="48.26" width="0.1524" layer="91"/>
+<junction x="160.02" y="48.26"/>
+</segment>
+</net>
+<net name="+5V" class="0">
+<segment>
+<pinref part="LIPOCHARGER-BOOSTER" gate="G$1" pin="P$2"/>
+<wire x1="-104.14" y1="99.06" x2="-83.82" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="99.06" x2="-83.82" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="83.82" x2="-73.66" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="3.3LDO" gate="G$1" pin="VIN"/>
+<junction x="-83.82" y="99.06"/>
+<pinref part="P+2" gate="1" pin="+5V"/>
+<wire x1="-83.82" y1="101.6" x2="-83.82" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="83.82" x2="-83.82" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="76.2" x2="-58.42" y2="76.2" width="0.1524" layer="91"/>
+<junction x="-83.82" y="83.82"/>
+<pinref part="OLED_SCREEN" gate="G$1" pin="5V"/>
+<wire x1="-58.42" y1="76.2" x2="-58.42" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="-58.42" y1="71.12" x2="-60.96" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="+3V3" class="0">
+<segment>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
+<pinref part="3.3LDO" gate="G$1" pin="VOUT"/>
+<wire x1="-76.2" y1="101.6" x2="-76.2" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="-76.2" y1="88.9" x2="-73.66" y2="88.9" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="I2C5" gate="G$1" pin="1"/>
+<pinref part="I2C6" gate="G$1" pin="2"/>
+<wire x1="-93.98" y1="-12.7" x2="-93.98" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-93.98" y1="-12.7" x2="-68.58" y2="-12.7" width="0.1524" layer="91"/>
+<junction x="-93.98" y="-12.7"/>
+<wire x1="-93.98" y1="-12.7" x2="-109.22" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="-109.22" y1="10.16" x2="-109.22" y2="-12.7" width="0.1524" layer="91"/>
+<pinref part="I2C3" gate="G$1" pin="2"/>
+<wire x1="-99.06" y1="10.16" x2="-109.22" y2="10.16" width="0.1524" layer="91"/>
+<junction x="-109.22" y="10.16"/>
+<wire x1="-109.22" y1="30.48" x2="-109.22" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="-109.22" y1="27.94" x2="-109.22" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-109.22" y1="22.86" x2="-109.22" y2="10.16" width="0.1524" layer="91"/>
+<junction x="-109.22" y="22.86"/>
+<wire x1="-81.28" y1="22.86" x2="-109.22" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-81.28" y1="25.4" x2="-81.28" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="I2C4" gate="G$1" pin="2"/>
+<wire x1="-66.04" y1="25.4" x2="-81.28" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="+3V2" gate="G$1" pin="+3V3"/>
+<pinref part="I2C1" gate="G$1" pin="2"/>
+<wire x1="-93.98" y1="27.94" x2="-109.22" y2="27.94" width="0.1524" layer="91"/>
+<junction x="-109.22" y="27.94"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="VDD@3"/>
+<pinref part="+3V4" gate="G$1" pin="+3V3"/>
+<wire x1="-40.64" y1="5.08" x2="-43.18" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="5.08" x2="-43.18" y2="7.62" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="VDD@21"/>
+<wire x1="-40.64" y1="2.54" x2="-43.18" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="2.54" x2="-43.18" y2="5.08" width="0.1524" layer="91"/>
+<junction x="-43.18" y="5.08"/>
+<pinref part="U$2" gate="G$1" pin="VDD@11"/>
+<wire x1="-40.64" y1="0" x2="-43.18" y2="0" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="0" x2="-43.18" y2="2.54" width="0.1524" layer="91"/>
+<junction x="-43.18" y="2.54"/>
+</segment>
+<segment>
+<pinref part="THERMO" gate="G$1" pin="VCC"/>
+<wire x1="7.62" y1="-17.78" x2="7.62" y2="-12.7" width="0.1524" layer="91"/>
+<pinref part="+3V5" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="+3V6" gate="G$1" pin="+3V3"/>
+<pinref part="RTC" gate="G$1" pin="VCC"/>
+<wire x1="48.26" y1="12.7" x2="48.26" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="10.16" x2="53.34" y2="10.16" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="EEPROM" gate="G$1" pin="VCC"/>
+<wire x1="172.72" y1="45.72" x2="172.72" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="50.8" x2="152.4" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="+3V7" gate="G$1" pin="+3V3"/>
+<wire x1="154.94" y1="86.36" x2="154.94" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="83.82" x2="154.94" y2="83.82" width="0.1524" layer="91"/>
+<junction x="154.94" y="83.82"/>
+<wire x1="154.94" y1="83.82" x2="154.94" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="68.58" x2="152.4" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="68.58" x2="152.4" y2="50.8" width="0.1524" layer="91"/>
+<junction x="152.4" y="50.8"/>
+<wire x1="152.4" y1="50.8" x2="132.08" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="50.8" x2="132.08" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="10EEPROM" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<wire x1="-25.4" y1="83.82" x2="-15.24" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="83.82" x2="-25.4" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="76.2" x2="-15.24" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="83.82" x2="-25.4" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="I2C2" gate="G$1" pin="1"/>
+<pinref part="I2C" gate="G$1" pin="1"/>
+<junction x="-25.4" y="83.82"/>
+<pinref part="+3V3" gate="G$1" pin="+3V3"/>
 </segment>
 </net>
 </nets>
