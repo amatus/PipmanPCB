@@ -4024,52 +4024,6 @@ Real time clock (RTC) with battery backup ability. Talk to it via i2c</descripti
 </deviceset>
 </devicesets>
 </library>
-<library name="ldo1117-33">
-<packages>
-<package name="1117-33">
-<wire x1="3.81" y1="3.81" x2="3.81" y2="-3.81" width="0.127" layer="21"/>
-<wire x1="-3.81" y1="-3.81" x2="3.81" y2="-3.81" width="0.127" layer="21"/>
-<wire x1="-3.81" y1="3.81" x2="3.81" y2="3.81" width="0.127" layer="21"/>
-<wire x1="-3.81" y1="-3.81" x2="-3.81" y2="3.81" width="0.127" layer="21"/>
-<smd name="GND" x="-2.54" y="-5.08" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="P$2" x="-2.54" y="-3.81" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="VOUT" x="0" y="-3.81" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="P$4" x="2.54" y="-3.81" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="VIN" x="2.54" y="-5.08" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-</package>
-</packages>
-<symbols>
-<symbol name="LDO1117-33">
-<pin name="GND" x="-5.08" y="-7.62" length="middle" rot="R90"/>
-<pin name="VOUT" x="0" y="-7.62" length="middle" rot="R90"/>
-<pin name="VIN" x="5.08" y="-7.62" length="middle" rot="R90"/>
-<wire x1="-10.16" y1="-2.54" x2="10.16" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-2.54" x2="10.16" y2="5.08" width="0.254" layer="94"/>
-<wire x1="10.16" y1="5.08" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="5.08" x2="-10.16" y2="-2.54" width="0.254" layer="94"/>
-<text x="-10.16" y="7.62" size="1.778" layer="95">&gt;Name</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="LDO1117-33">
-<gates>
-<gate name="G$1" symbol="LDO1117-33" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="1117-33">
-<connects>
-<connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="VIN" pad="VIN"/>
-<connect gate="G$1" pin="VOUT" pad="VOUT"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="5-wayswitch">
 <packages>
 <package name="5-WAYSWITCH">
@@ -7731,6 +7685,152 @@ Source: AVX .. aphvc.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="burr-brown">
+<packages>
+<package name="SOT223">
+<description>&lt;b&gt;Smal Outline Transistor&lt;/b&gt;</description>
+<wire x1="-3.124" y1="1.731" x2="-3.124" y2="-1.729" width="0.1524" layer="21"/>
+<wire x1="3.124" y1="-1.729" x2="3.124" y2="1.731" width="0.1524" layer="21"/>
+<wire x1="-3.124" y1="1.731" x2="3.124" y2="1.731" width="0.1524" layer="21"/>
+<wire x1="3.124" y1="-1.729" x2="-3.124" y2="-1.729" width="0.1524" layer="21"/>
+<rectangle x1="-1.524" y1="1.778" x2="1.524" y2="3.302" layer="51"/>
+<rectangle x1="-2.667" y1="-3.302" x2="-1.905" y2="-1.778" layer="51"/>
+<rectangle x1="1.905" y1="-3.302" x2="2.667" y2="-1.778" layer="51"/>
+<rectangle x1="-0.381" y1="-3.302" x2="0.381" y2="-1.778" layer="51"/>
+<smd name="1" x="-2.2606" y="-3.1496" dx="1.4986" dy="2.0066" layer="1"/>
+<smd name="2" x="0.0254" y="-3.1496" dx="1.4986" dy="2.0066" layer="1"/>
+<smd name="3" x="2.3114" y="-3.1496" dx="1.4986" dy="2.0066" layer="1"/>
+<smd name="4" x="0" y="3.1496" dx="3.81" dy="2.0066" layer="1"/>
+<text x="-2.54" y="4.318" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.794" y="-5.842" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+<package name="DD-3">
+<description>&lt;b&gt;DPAC&lt;/b&gt;</description>
+<wire x1="-5.398" y1="-4.445" x2="-5.084" y2="-4.445" width="0.1524" layer="21"/>
+<wire x1="-5.084" y1="-4.445" x2="5.076" y2="-4.445" width="0.1524" layer="21"/>
+<wire x1="5.076" y1="-4.445" x2="5.398" y2="-4.445" width="0.1524" layer="21"/>
+<wire x1="5.398" y1="-4.445" x2="5.398" y2="4.128" width="0.1524" layer="21"/>
+<wire x1="5.398" y1="4.128" x2="-5.398" y2="4.128" width="0.1524" layer="21"/>
+<wire x1="-5.398" y1="4.128" x2="-5.398" y2="-4.445" width="0.1524" layer="21"/>
+<wire x1="-5.084" y1="3.81" x2="5.076" y2="3.81" width="0.1524" layer="21"/>
+<wire x1="5.076" y1="3.81" x2="5.076" y2="-4.445" width="0.1524" layer="21"/>
+<wire x1="-5.084" y1="-4.445" x2="-5.084" y2="3.81" width="0.1524" layer="21"/>
+<wire x1="-5.398" y1="4.128" x2="-5.084" y2="3.81" width="0.1524" layer="21"/>
+<wire x1="5.398" y1="4.128" x2="5.076" y2="3.81" width="0.1524" layer="21"/>
+<wire x1="-5.398" y1="4.128" x2="-5.398" y2="5.08" width="0.1524" layer="21"/>
+<wire x1="-5.398" y1="5.08" x2="-4.445" y2="5.715" width="0.1524" layer="21"/>
+<wire x1="-4.445" y1="5.715" x2="4.445" y2="5.715" width="0.1524" layer="21"/>
+<wire x1="4.445" y1="5.715" x2="5.398" y2="5.08" width="0.1524" layer="21"/>
+<wire x1="5.398" y1="5.08" x2="5.398" y2="4.128" width="0.1524" layer="21"/>
+<rectangle x1="-3.175" y1="-9.525" x2="-1.905" y2="-4.445" layer="51"/>
+<rectangle x1="-0.635" y1="-9.525" x2="0.635" y2="-4.445" layer="51"/>
+<rectangle x1="1.905" y1="-9.525" x2="3.175" y2="-4.445" layer="51"/>
+<smd name="1" x="-2.54" y="-7.9375" dx="1.27" dy="5.08" layer="1"/>
+<smd name="2" x="0" y="-7.9375" dx="1.27" dy="5.08" layer="1"/>
+<smd name="3" x="2.54" y="-7.9375" dx="1.27" dy="5.08" layer="1"/>
+<text x="-3.81" y="-10.795" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="-2.54" y="-1.27" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+<package name="TO252">
+<description>&lt;b&gt;SMALL OUTLINE TRANSISTOR&lt;/b&gt;&lt;p&gt;
+TS-003</description>
+<wire x1="3.2766" y1="3.8354" x2="3.277" y2="-2.159" width="0.2032" layer="21"/>
+<wire x1="3.277" y1="-2.159" x2="-3.277" y2="-2.159" width="0.2032" layer="21"/>
+<wire x1="-3.277" y1="-2.159" x2="-3.2766" y2="3.8354" width="0.2032" layer="21"/>
+<wire x1="-3.277" y1="3.835" x2="3.2774" y2="3.8346" width="0.2032" layer="51"/>
+<wire x1="-3.973" y1="5.983" x2="3.973" y2="5.983" width="0.0508" layer="39"/>
+<wire x1="3.973" y1="-5.983" x2="-3.973" y2="-5.983" width="0.0508" layer="39"/>
+<wire x1="-3.973" y1="-5.983" x2="-3.973" y2="5.983" width="0.0508" layer="39"/>
+<wire x1="3.973" y1="5.983" x2="3.973" y2="-5.983" width="0.0508" layer="39"/>
+<wire x1="-2.5654" y1="3.937" x2="-2.5654" y2="4.6482" width="0.2032" layer="51"/>
+<wire x1="-2.5654" y1="4.6482" x2="-2.1082" y2="5.1054" width="0.2032" layer="51"/>
+<wire x1="-2.1082" y1="5.1054" x2="2.1082" y2="5.1054" width="0.2032" layer="51"/>
+<wire x1="2.1082" y1="5.1054" x2="2.5654" y2="4.6482" width="0.2032" layer="51"/>
+<wire x1="2.5654" y1="4.6482" x2="2.5654" y2="3.937" width="0.2032" layer="51"/>
+<wire x1="2.5654" y1="3.937" x2="-2.5654" y2="3.937" width="0.2032" layer="51"/>
+<rectangle x1="-2.7178" y1="-5.1562" x2="-1.8542" y2="-2.2606" layer="51"/>
+<rectangle x1="1.8542" y1="-5.1562" x2="2.7178" y2="-2.2606" layer="51"/>
+<rectangle x1="-0.4318" y1="-3.0226" x2="0.4318" y2="-2.2606" layer="21"/>
+<smd name="1" x="-2.28" y="-4.8" dx="1" dy="1.6" layer="1"/>
+<smd name="2" x="2.28" y="-4.8" dx="1" dy="1.6" layer="1"/>
+<smd name="3" x="0" y="2.5" dx="5.4" dy="6.2" layer="1"/>
+<text x="-3.81" y="-2.54" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="5.08" y="-2.54" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<polygon width="0.1998" layer="51">
+<vertex x="-2.5654" y="3.937"/>
+<vertex x="-2.5654" y="4.6482"/>
+<vertex x="-2.1082" y="5.1054"/>
+<vertex x="2.1082" y="5.1054"/>
+<vertex x="2.5654" y="4.6482"/>
+<vertex x="2.5654" y="3.937"/>
+</polygon>
+</package>
+</packages>
+<symbols>
+<symbol name="REG1118">
+<wire x1="-7.62" y1="-7.62" x2="7.62" y2="-7.62" width="0.4064" layer="94"/>
+<wire x1="7.62" y1="-7.62" x2="7.62" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="-7.62" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="-7.62" y1="5.08" x2="-7.62" y2="-7.62" width="0.4064" layer="94"/>
+<pin name="GND" x="0" y="-12.7" length="middle" direction="pwr" rot="R90"/>
+<pin name="VIN" x="-12.7" y="0" length="middle" direction="in"/>
+<pin name="VOUT" x="12.7" y="0" length="middle" direction="out" rot="R180"/>
+<text x="-7.62" y="5.715" size="1.778" layer="95" ratio="10">&gt;NAME</text>
+<text x="-5.08" y="2.54" size="1.778" layer="96" ratio="10">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="REG1117" prefix="IC">
+<description>&lt;b&gt;800mA and 1A Low Dropout (LDO) Positive Regulator&lt;/b&gt;&lt;p&gt;
+1.8V, 2.5V, 2.85V, 3.3V, 5V, and Adj</description>
+<gates>
+<gate name="G$1" symbol="REG1118" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT223">
+<connects>
+<connect gate="G$1" pin="GND" pad="1"/>
+<connect gate="G$1" pin="VIN" pad="3"/>
+<connect gate="G$1" pin="VOUT" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="REG1117" constant="no"/>
+<attribute name="OC_FARNELL" value="1097566" constant="no"/>
+<attribute name="OC_NEWARK" value="14P6981" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="F" package="DD-3">
+<connects>
+<connect gate="G$1" pin="GND" pad="1"/>
+<connect gate="G$1" pin="VIN" pad="3"/>
+<connect gate="G$1" pin="VOUT" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="TEXAS INSTRUMENTS" constant="no"/>
+<attribute name="MPN" value="REG1117FAKTTT" constant="no"/>
+<attribute name="OC_FARNELL" value="1296120" constant="no"/>
+<attribute name="OC_NEWARK" value="87H2562" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="X" package="TO252">
+<connects>
+<connect gate="G$1" pin="GND" pad="1"/>
+<connect gate="G$1" pin="VIN" pad="2"/>
+<connect gate="G$1" pin="VOUT" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -7748,7 +7848,6 @@ Source: AVX .. aphvc.pdf</description>
 <part name="USB" library="4pinUSB" deviceset="4PINUSB" device=""/>
 <part name="OLED_SCREEN" library="4dScreen" deviceset="4DSCREEN" device=""/>
 <part name="LIPOCHARGER-BOOSTER" library="SFLipoPack" deviceset="SFLIPO" device=""/>
-<part name="3.3LDO" library="ldo1117-33" deviceset="LDO1117-33" device=""/>
 <part name="5WAYSWITCH" library="5-wayswitch" deviceset="5-WAYSWITCH" device=""/>
 <part name="EEPROM" library="adafruit" deviceset="DS1307" device=""/>
 <part name="S1" library="adafruit" deviceset="EG1213" device=""/>
@@ -7785,6 +7884,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="C4" library="SparkFun" deviceset="CAP" device="0603"/>
 <part name="SUPPLY9" library="supply2" deviceset="GND" device=""/>
 <part name="+3V9" library="supply1" deviceset="+3V3" device=""/>
+<part name="3.3LDO" library="burr-brown" deviceset="REG1117" device="X"/>
 </parts>
 <sheets>
 <sheet>
@@ -7798,7 +7898,6 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="USB" gate="G$1" x="43.18" y="106.68" rot="R270"/>
 <instance part="OLED_SCREEN" gate="G$1" x="-68.58" y="68.58"/>
 <instance part="LIPOCHARGER-BOOSTER" gate="G$1" x="-111.76" y="96.52"/>
-<instance part="3.3LDO" gate="G$1" x="-66.04" y="88.9" rot="R270"/>
 <instance part="5WAYSWITCH" gate="G$1" x="-71.12" y="0"/>
 <instance part="EEPROM" gate="G$1" x="165.1" y="27.94"/>
 <instance part="S1" gate="1" x="-93.98" y="81.28" rot="R270"/>
@@ -7819,7 +7918,7 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="SUPPLY5" gate="GND" x="53.34" y="96.52"/>
 <instance part="SUPPLY6" gate="GND" x="165.1" y="10.16"/>
 <instance part="P+2" gate="1" x="-83.82" y="104.14"/>
-<instance part="+3V1" gate="G$1" x="-76.2" y="104.14"/>
+<instance part="+3V1" gate="G$1" x="-40.64" y="106.68"/>
 <instance part="+3V2" gate="G$1" x="-109.22" y="33.02"/>
 <instance part="+3V3" gate="G$1" x="-25.4" y="96.52"/>
 <instance part="+3V4" gate="G$1" x="-43.18" y="10.16"/>
@@ -7836,6 +7935,7 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="C4" gate="G$1" x="-7.62" y="15.24"/>
 <instance part="SUPPLY9" gate="GND" x="-7.62" y="7.62"/>
 <instance part="+3V9" gate="G$1" x="-7.62" y="25.4"/>
+<instance part="3.3LDO" gate="G$1" x="-55.88" y="96.52"/>
 </instances>
 <busses>
 </busses>
@@ -8112,9 +8212,11 @@ Source: AVX .. aphvc.pdf</description>
 <pinref part="SUPPLY1" gate="GND" pin="GND"/>
 <wire x1="-86.36" y1="76.2" x2="-86.36" y2="83.82" width="0.1524" layer="91"/>
 <junction x="-86.36" y="83.82"/>
-<pinref part="3.3LDO" gate="G$1" pin="GND"/>
 <wire x1="-86.36" y1="93.98" x2="-73.66" y2="93.98" width="0.1524" layer="91"/>
 <junction x="-86.36" y="93.98"/>
+<wire x1="-73.66" y1="93.98" x2="-73.66" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="3.3LDO" gate="G$1" pin="GND"/>
+<wire x1="-73.66" y1="83.82" x2="-55.88" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="USB" gate="G$1" pin="VSS"/>
@@ -8200,27 +8302,21 @@ Source: AVX .. aphvc.pdf</description>
 <segment>
 <pinref part="LIPOCHARGER-BOOSTER" gate="G$1" pin="P$2"/>
 <wire x1="-104.14" y1="99.06" x2="-83.82" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="-83.82" y1="99.06" x2="-83.82" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="-83.82" y1="83.82" x2="-73.66" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="3.3LDO" gate="G$1" pin="VIN"/>
+<wire x1="-83.82" y1="99.06" x2="-83.82" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="96.52" x2="-83.82" y2="76.2" width="0.1524" layer="91"/>
 <junction x="-83.82" y="99.06"/>
 <pinref part="P+2" gate="1" pin="+5V"/>
 <wire x1="-83.82" y1="101.6" x2="-83.82" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="-83.82" y1="83.82" x2="-83.82" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="-83.82" y1="76.2" x2="-58.42" y2="76.2" width="0.1524" layer="91"/>
-<junction x="-83.82" y="83.82"/>
 <pinref part="OLED_SCREEN" gate="G$1" pin="5V"/>
 <wire x1="-58.42" y1="76.2" x2="-58.42" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="-58.42" y1="71.12" x2="-60.96" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="3.3LDO" gate="G$1" pin="VIN"/>
+<wire x1="-83.82" y1="96.52" x2="-68.58" y2="96.52" width="0.1524" layer="91"/>
+<junction x="-83.82" y="96.52"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
-<segment>
-<pinref part="+3V1" gate="G$1" pin="+3V3"/>
-<pinref part="3.3LDO" gate="G$1" pin="VOUT"/>
-<wire x1="-76.2" y1="101.6" x2="-76.2" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="-76.2" y1="88.9" x2="-73.66" y2="88.9" width="0.1524" layer="91"/>
-</segment>
 <segment>
 <pinref part="I2C5" gate="G$1" pin="1"/>
 <pinref part="I2C6" gate="G$1" pin="2"/>
@@ -8333,6 +8429,12 @@ Source: AVX .. aphvc.pdf</description>
 <pinref part="+3V9" gate="G$1" pin="+3V3"/>
 <pinref part="C4" gate="G$1" pin="1"/>
 <wire x1="-7.62" y1="22.86" x2="-7.62" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="3.3LDO" gate="G$1" pin="VOUT"/>
+<wire x1="-43.18" y1="96.52" x2="-40.64" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
+<wire x1="-40.64" y1="96.52" x2="-40.64" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
